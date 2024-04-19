@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: "Roboto", sans-serif;
+    height: 155vh;
+    background-color: #302e2b; /* Darker cream color */
+    color: #e0dedb; /* Lighter brown color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+li,
+a 
+{
+    all: unset;
+    box-sizing: border-box;
+}
+
+.container 
+{
+    background-color: #49321f; /* Darker coffee brown color */;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 27%;
+}
+
+.logo 
+{
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.logo img 
+{
+    max-width: 150px;
+}
+
+.header 
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1,
+.form-section h3 
+{
+    font-size: 2em;
+    color: #dad8d6;
+    margin-bottom: 10px;
+}
+
+.header h2 
+{
+    font-size: 1.2em;
+    color: #dad8d6;
+    margin-bottom: 20px;
+}
+
+.form-section 
+{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-field 
+{
+    margin-bottom: 15px;
+}
+
+.form-field input,
+.form-field textarea 
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dad8d6;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 5px;
+}
+
+.form-field.radio-buttons 
+{
+    text-align: center;
+}
+
+.form-field.radio-buttons label {
+    display: inline-block; /* Display the labels inline */
+    margin-right: 2px; /* Add some space between the radio buttons */
+    margin-left: 15px;
+}
+
+#dine-takeout-container {
+    display: inline-block; 
+    margin-right: 25px; /* Add some space between the radio buttons */
+    margin-left: 10px; /* Add space between the radio buttons */
+}
+
+/* Additional styling for radio buttons if needed */
+#dine-takeout-container label {
+    flex: 1; /* Distribute available space evenly between the radio buttons */
+}
+
+.form-field label 
+{
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: #dad8d6;
+}
+
+.radio-buttons 
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.radio-buttons label 
+{
+    margin: 0 7px;
+}
+
+#dropdown 
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dropdown-toggle 
+{
+    background-color: #787676;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover 
+{
+    background-color: #525151;
+}
+
+.menu,
+.submenu 
+{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    background-color: #787676;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+}
+
+.menu 
+{
+    position: absolute;
+}
+
+.submenu 
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #787676; 
+    padding: 10px;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+}
+
+.submenu.coffee
+{
+    position: absolute;
+    top: 42%;
+    left: 100%; 
+}
+
+.submenu.submenu-frappe 
+{
+    position: absolute;
+    top: 62%;
+    left: 100%; 
+}
+
+.submenu.submenu-specials 
+{
+    position: absolute;
+    top: 81%;
+    left: 100%; 
+}
+
+.submenu-item 
+{
+    background-color: #484848; 
+    padding: 10px;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+}
+
+.submenu-item:last-child 
+{
+    border-bottom: none;
+}
+
+.submenu-item:hover 
+{
+    background-color: #434343;
+}
+
+.menu-item,
+.submenu-item 
+{
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #939292;
+    display: block;
+    width: 154px;
+}
+
+.menu-item:last-child,
+.submenu-item:last-child 
+{
+    border-bottom: none;
+}
+
+.menu-item:hover,
+.submenu-item:hover 
+{
+    background-color: #535252;
+}
+
+.order-button,
+.cancel-button 
+{
+    background-color: #674a1c; /* Darker brown color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 37px;
+}
+
+.order-button:hover,
+.cancel-button:hover 
+{
+    background-color: #735a40; /* Lighter coffee brown color */
+}
+
+.cancel-button 
+{
+    background-color: #333;
+}
+
+.cancel-button:hover 
+{
+    background-color: #111;
+}
+

@@ -1,0 +1,334 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #302e2b; /* Darker cream color */
+    color: #e0dedb; /* Lighter brown color */
+    min-height: 180vh;
+    position: relative;
+}
+
+/* Header styles */
+header {
+    background-color: #49321f; /* Darker coffee brown color */;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header styles */
+.logo {
+    display: inline-block;
+    margin-left: 20px;
+    width: 200px; /* Adjust the width to make the logo bigger */
+}
+
+/* Logo styles */
+.logo img {
+    height: 110px; /* Maintain the original height */
+    width: 130px; /* Adjust the width to make the logo bigger */
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 50px; /* Increase the right margin for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px; /* Increase the font size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4a373; /* Lighter coffee brown color */
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 100px; /* Adjust the margin-bottom to accommodate the footer */
+    display: flex; /* Add flexbox to align carousel and containers */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements horizontally */
+}
+
+.carousel-item {
+    height: 800px; /* Set a fixed height for all carousel items */
+    overflow: hidden; /* Hide overflow to maintain aspect ratio */
+    border-radius: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.carousel-item:hover img {
+    opacity: 0.7; /* Dim the image on hover */
+}
+
+.containers-wrapper {
+    display: flex; /* Align containers horizontally */
+    justify-content: space-around; /* Evenly distribute space between containers */
+    width: 100%; /* Ensure full width */
+}
+
+.carousel-label {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    margin-right: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 100px;
+    font-size: 70px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Set width for the controls */
+    height: 50px; /* Set height for the controls */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Make the controls circular */
+    cursor: pointer;
+    z-index: 2; /* Ensure controls are above the carousel items */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: 20px; /* Adjust the left position of the previous control */
+}
+
+.carousel-control-next {
+    right: 20px; /* Adjust the right position of the next control */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background on hover */
+}
+
+.carousel-item:hover .carousel-label {
+    opacity: 1; /* Show the label on hover */
+}
+
+/* Container styles */
+.best-sellers,
+.new-products,
+.categories {
+    width: 400px; /* Set width */
+    height: 250px; /* Set height */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    margin-bottom: 20px; /* Add margin between containers */
+    text-align: center; /* Center-align content */
+    position: relative; /* Position for absolute children */
+    overflow: hidden; /* Hide overflow to prevent label overflow */
+    border-radius: 15px;
+    font-style: oblique;
+}
+
+/* Dim overlay on hover */
+/* Dim overlay on hover */
+.best-sellers:hover::before,
+.new-products:hover::before,
+.categories:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Ensure overlay is above content */
+    pointer-events: none; /* Allow interaction with underlying content */
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+    opacity: 1; /* Initially hidden */
+}
+
+#start-order-btn {
+    display: block;
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color: #674a1c; /* Darker brown color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-order-btn:hover {
+    background-color: #49321f; /* Darker coffee brown color */
+}
+
+footer {
+    background-color: #463f3a; /* Darker coffee brown color */
+    color: #fff;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-left {
+    float: left; /* Align to the left */
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+footer .footer-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-left ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer .footer-left ul li:last-child {
+    margin-right: 0; /* Remove margin right for the last item */
+}
+
+footer .footer-left ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links {
+    text-align: right; /* Align social links to the right */
+}
+
+.social-links a {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-right: 20px;
+}
+
+.social-links img {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.container-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6f4e37; /* Dark coffee brown color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 0.7s ease;
+    z-index: 1; /* Ensure overlay is above content */
+}
+
+.container-overlay:hover {
+    opacity: 0.7; /* Fade in on hover */
+}
+
+.overlay-label {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2; /* Ensure label is above overlay */
+}
+
+.modal-header {
+    background-color: #49321f; /* Darker coffee brown color */;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: row; /* Display items in a column */
+    align-items: center; /* Center-align items horizontally */
+    background-color: #302e2b; /* Darker cream color */
+}
+
+.modal-image {
+    display: inline-block;
+    max-width: 50%;
+    height: auto;
+}
+
+.modal-label {
+    display: inline-block; /* Ensure the label appears inline */
+    margin-left: 10px; /* Add some space between the image and label */
+    color: #ffffff; /* Set text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+.modal-footer {
+    background-color: #463f3a; /* Darker coffee brown color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .logo {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    footer .footer-left {
+        float: none; /* Reset float for responsiveness */
+        text-align: center; /* Center align the footer content */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+    }
+
+    footer .footer-left ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0; /* Reset margin right for responsiveness */
+    }
+}
